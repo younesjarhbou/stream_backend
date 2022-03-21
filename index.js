@@ -11,7 +11,12 @@ const server = http.createServer(app);
 const io = require("socket.io")(server);
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin :"http://172.26.52.87:3000",
+    credentials : true
+  }
+));
 
 const config = require("./config");
 
