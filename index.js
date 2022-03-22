@@ -13,7 +13,7 @@ const io = require("socket.io")(server);
 app.use(express.json());
 app.use(cors(
   {
-    origin :"http://172.26.52.87:3000",
+    origin :"*",
     credentials : true
   }
 ));
