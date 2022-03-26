@@ -7,15 +7,17 @@ module.exports = () => {
         next();
       } else {
         // console.log("Unauthorized access");
-        return res
+        next();
+      /* return res
           .status(401)
-          .send({ success: false, error: "Unauthorized access" });
+          .send({ success: false, error: "Unauthorized access" });*/
       }
     } else {
       // console.log("Unauthorized access");
-      return res
+      next();
+    /*  return res
         .status(401)
-        .send({ success: false, error: "Unauthorized access" });
+        .send({ success: false, error: "Unauthorized access" });*/
     }
   };
 };

@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(cors(
   {
     origin :"*",
-    credentials : true
+ 
   }
 ));
 
@@ -129,6 +129,23 @@ app.use("/storage", express.static(path.join(__dirname, "storage")));
 app.get("/*", function (req, res) {
   res.status(200).sendFile(path.join(__dirname, "public", "index.html"));
 });
+/*
+app.use(express.static(path.join(__dirname, "public")));
+app.get('*', (req, res) => {
+  res.sendFile(
+      path.resolve(__dirname, '../client', 'build', 'index.html')
+  );
+});*/
+////static file
+/*if(process.env.NODE_ENV === 'production')
+{
+  app.use(express.static(path.join(__dirname, "public")));
+  app.get('*', (req, res) => {
+    res.sendFile(
+        path.resolve(__dirname, '../../client', 'build', 'index.html')
+    );
+  });
+}*/
 
 mongoose.connect("mongodb+srv://jarhbou:jswhmzWIaNygMF6E@cluster0.hoqdj.mongodb.net/LiveHunt", {
   useNewUrlParser: true,
