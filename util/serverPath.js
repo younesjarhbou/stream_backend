@@ -1,5 +1,5 @@
 
-exports.serverPath = "https://stream-backend-lolo.herokuapp.com/"; // example: https://example.example.com/
+exports.serverPath = "https://lololive.herokuapp.com/"; // example: https://example.example.com/
 
 
 
