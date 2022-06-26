@@ -1,5 +1,5 @@
 
-exports.serverPath = "http://lolostream.live/"; // example: https://example.example.com/
+exports.serverPath = "http://127.0.0.1:9000/"; // example: https://example.example.com/
 
 
 
