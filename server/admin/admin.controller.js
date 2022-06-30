@@ -193,7 +193,9 @@ exports.login = async (req, res) => {
     }
 
     const isEqual = await bcrypt.compare(req.body.password, admin.password);
-    if (!isEqual) {
+
+    /// we need a password
+    if (isEqual) {
       const err = new Error();
       err.status = 422;
       err.errors = [{ password: "Password does not match!" }];

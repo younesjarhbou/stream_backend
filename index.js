@@ -274,6 +274,7 @@ io.on("connect", (socket) => {
   });
 });
 
+
 //start the server
 server.listen(config.PORT, () => {
   console.log("Magic happens on port " + config.PORT);
